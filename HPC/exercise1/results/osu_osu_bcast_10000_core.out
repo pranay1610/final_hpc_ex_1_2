@@ -1,0 +1,36 @@
+
+# OSU MPI Broadcast Latency Test v7.4
+# Datatype: MPI_CHAR.
+# Size       Avg Latency(us)
+1                       1.01
+2                       1.10
+4                       1.06
+8                       1.01
+16                      1.04
+32                      1.22
+64                      1.21
+128                     2.17
+256                     2.72
+512                     3.30
+1024                    4.21
+2048                    6.00
+4096                    9.25
+8192                   16.06
+
+# OSU MPI Broadcast Latency Test v7.4
+# Datatype: MPI_CHAR.
+# Size       Avg Latency(us)
+1                       1.07
+2                       1.11
+4                       1.10
+8                       1.09
+16                      1.03
+32                      1.22
+64                      1.19
+128                     2.13
+256                     2.73
+512                     3.29
+1024                    4.38
+2048                    5.98
+4096                    9.16
+8192                   15.96
