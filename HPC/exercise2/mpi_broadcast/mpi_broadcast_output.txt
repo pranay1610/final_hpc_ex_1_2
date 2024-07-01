@@ -1,0 +1,2 @@
+Custom MPI_Broadcast time: 0.000190 seconds
+MPI_Bcast time: 0.000017 seconds
