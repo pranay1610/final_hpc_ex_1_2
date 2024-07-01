@@ -1,0 +1,15 @@
+Process 0 of 1 starting.
+Process 0 of 1 starting.
+Process 0 of 1 starting.
+Process 0 of 1 starting.
+Process 0 of 1 starting.
+Process 0 completed computation.
+Output written to mandelbrot.pgm
+Process 0 completed computation.
+Output written to mandelbrot.pgm
+Process 0 completed computation.
+Output written to mandelbrot.pgm
+Process 0 completed computation.
+Output written to mandelbrot.pgm
+Process 0 completed computation.
+Output written to mandelbrot.pgm
