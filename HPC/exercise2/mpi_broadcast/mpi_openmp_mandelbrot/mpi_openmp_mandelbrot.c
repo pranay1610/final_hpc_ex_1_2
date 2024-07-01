@@ -45,6 +45,8 @@ int main(int argc, char *argv[]) {
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     MPI_Comm_size(MPI_COMM_WORLD, &size);
 
+    printf("Process %d of %d starting.\n", rank, size);
+
     int rows_per_process = n_y / size;
     int *local_data = malloc(rows_per_process * n_x * sizeof(int));
 
@@ -60,6 +62,8 @@ int main(int argc, char *argv[]) {
             local_data[j * n_x + i] = mandelbrot(c, I_max);
         }
     }
+
+    printf("Process %d completed computation.\n", rank);
 
     int *data = NULL;
     if (rank == 0) {
@@ -84,9 +88,11 @@ int main(int argc, char *argv[]) {
         }
         write_pgm_image("mandelbrot.pgm", data, n_x, n_y, I_max);
         free(data);
+        printf("Output written to mandelbrot.pgm\n");
     }
 
     free(local_data);
     MPI_Finalize();
     return 0;
 }
+
