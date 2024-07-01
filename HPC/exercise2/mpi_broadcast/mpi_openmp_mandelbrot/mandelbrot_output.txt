@@ -1,0 +1,9 @@
+Process 1 of 4 starting.
+Process 2 of 4 starting.
+Process 0 of 4 starting.
+Process 3 of 4 starting.
+Process 0 completed computation.
+Process 3 completed computation.
+Process 2 completed computation.
+Process 1 completed computation.
+Output written to mandelbrot.pgm
