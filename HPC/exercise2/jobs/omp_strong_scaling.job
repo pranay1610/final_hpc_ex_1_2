@@ -1,0 +1,11 @@
+#!/bin/bash
+#SBATCH --job-name=omp_strong_scaling
+#SBATCH --output=omp_strong_scaling.out
+#SBATCH --error=omp_strong_scaling.err
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=32
+#SBATCH --time=01:00:00
+#SBATCH --partition=EPYC
+
+module load openMPI/4.1.5/gnu/12.2.1
+bash ../scripts/omp_strong_scaling.sh

@@ -1,9 +1,6 @@
-#include <mpi.h>
-#include <omp.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include "mandelbrot.h"
-#include "image_utils.h"
+#include "timing_utils.h"
+
+// ... [rest of your code]
 
 int main(int argc, char *argv[]) {
     int provided;
@@ -44,7 +41,16 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
+    Timer timer;
+    start_timer(&timer);
+
     compute_mandelbrot(local_matrix, start_x, end_x, n_y, x_L, y_L, x_R, y_R, I_max, n_x);
+
+    stop_timer(&timer);
+    double elapsed_time = get_elapsed_time(&timer);
+    if (rank == 0) {
+        printf("Execution time: %f seconds\n", elapsed_time);
+    }
 
     unsigned char *global_matrix = NULL;
     if (rank == 0) {
@@ -62,3 +68,4 @@ int main(int argc, char *argv[]) {
     MPI_Finalize();
     return 0;
 }
+
