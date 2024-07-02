@@ -1,0 +1,4 @@
+mv: cannot stat 'mandelbrot.pgm': No such file or directory
+mv: cannot move 'mandelbrot.pgm' to '../results/omp_strong_scaling/mandelbrot_4.pgm': No such file or directory
+mv: cannot stat 'mandelbrot.pgm': No such file or directory
+../scripts/omp_strong_scaling.sh: line 14: s: command not found
