@@ -1,1 +1,0 @@
-../scripts/omp_strong_scaling.sh: line 11: ./mandelbrot: No such file or directory
